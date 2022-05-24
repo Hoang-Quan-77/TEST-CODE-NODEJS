@@ -1,0 +1,22 @@
+3 dòng đầu (const mongoose … ): khai báo module sử dụng trong file
+Const userSchema = mongoose.Schema: khởi tạo schema user
+Nội dung trong việc khởi tạo schema:
+{
+	Tên dữ liệu: {
+		Type: kiểu dữ liệu (String, Number, Boolean),
+		Trim: loại bỏ các kí tự đặc biệt,
+		Default: mặc định nếu không khai báo,
+		Required: bắt buột hay không,
+		Unique: Đặt biệt và duy nhất 
+		Lowercase: viết thường,
+		Minlenght: độ dài tối thiểu,
+		Enum: phải là 1 trong những giá trị yêu cầu
+		Validate: chức năng dùng để xác định input có đúng yêu cầu hay không
+}
+}
+Module.exports = mongoose.model(‘’,) dùng để xuất schema cho những truy xuất sau này
+
+Nhận xét:
+•	Age không cần dùng trim
+•	Avatar không cần trim và default không phải là url hình ảnh
+•	Enum của role chưa khai báo giá trị 
